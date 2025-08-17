@@ -3,11 +3,10 @@ package com.example;
 import java.util.List;
 
 public class Cat {
+    private final Predator predator;  // Теперь зависит от интерфейса
 
-    Predator predator;
-
-    public Cat(Feline feline) {
-        this.predator = feline;
+    public Cat(Predator predator) {  // Принимает Predator вместо Feline
+        this.predator = predator;
     }
 
     public String getSound() {
